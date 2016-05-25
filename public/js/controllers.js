@@ -2,6 +2,10 @@
 
 var app = angular.module('finalApp');
 
+app.controller('beerController', function($scope, $http, BeerSvc) {
+
+});
+
 app.controller('homeController', function($scope, $http, BeerSvc) {
     console.log('homeCtrl!');
 
@@ -16,24 +20,28 @@ app.controller('homeController', function($scope, $http, BeerSvc) {
         console.log('err:', err);
     });
 
-    $scope.saveBeer = (thisBeer) => {
-   // console.log(thisAuctionEdit)
-        BeerSvc.update(thisBeer) 	
-        .then(res => {
-            $scope.beers.forEach((beer, i) => {
-                if(beer._id === res.data._id) {
-                $scope.beer[i] = res.data;
-                }
-            })
+    BeerSvc.getAll()
+    .then(res => {
+        $scope.beers = res.data;
 
-       $scope.beers.push($scope.thisBeer);
-       
+        var beers = $scope.beers;
+ 
+    })
+    .catch(err => {
+        console.log('err:', err);
+    });
 
-        
 
+
+    $scope.addBeer = function(thisBeer) {
+
+        BeerSvc.create($scope.thisBeer) 	
+ 		$scope.beers.push($scope.thisBeer);
+      	console.log('thisBeer', $scope.thisBeer);
+    }
 });
 
-app.controller('profilesController', function($scope, $state, $rootScope) {
+app.controller('profilesController', function($scope, $state, $rootScope, BeerSvc) {
     console.log('profileCtrl!');
     console.log('user:', $scope.user);
 
@@ -42,5 +50,22 @@ app.controller('profilesController', function($scope, $state, $rootScope) {
     $scope.user = $rootScope.user;
     $scope.profilePic = $rootScope.user.customData.profilePic;
 
-  });
+
+    BeerSvc.getAll()
+    .then(res => {
+        $scope.beers = res.data;
+        var beers = $scope.beers;
+ 
+    })
+    .catch(err => {
+        console.log('err:', err);
+    });
+
+        $scope.removeBeer = function(beer) {
+        BeerSvc.delete(beer);
+        $scope.beers.splice(0, 1);
+    }
+
+});
+
 

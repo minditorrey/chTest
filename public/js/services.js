@@ -5,13 +5,22 @@ var app = angular.module('finalApp');
 
 app.service('BeerSvc', function($http) {
 
-  this.getBeer = function() {
+  	this.getBeer = function() {
     return $http.get('api/beer/random');
-  };
+  	};
 
-  this.update = beer => {
-    return $http.put(`/api/beer/${beer._id}`, auction);
+  	this.getAll = () => {
+    	return $http.get('/api/beer');
+  	};
+
+  	this.create = beer => {
+    return $http.post('/api/beer', beer);
   	}
+
+  	this.delete = (beer) => {
+  		return $http.delete(`/api/beer/${beer._id}`)
+  	}
+
 });
 
 // app.service('ProfileService', function($http) {

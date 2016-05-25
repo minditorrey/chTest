@@ -32,6 +32,19 @@ body {
 	opacity: .8;
 }
 
+.searchBox {
+	font-size: 20px;
+}
+.beerADay {
+	margin-top: 20%;
+	font-size: 18px;
+}
+.glyphicon {
+	background-color: #b40f0f;
+}
+.hide {
+	/*display: none;*/
+}
 .beerHeader {
 	opacity: 1;
 	color: #b40f0f;
@@ -39,6 +52,10 @@ body {
 .rateBtn {
 	background-color: #b40f0f;
 	color: black;
+	opacity: 1;
+}
+
+th, td {
 	opacity: 1;
 }
 .well {
