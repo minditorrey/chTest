@@ -1,5 +1,5 @@
 body {
-  background: url(https://s-media-cache-ak0.pinimg.com/736x/eb/89/4d/eb894dd988735b27031513355260fc4e.jpg) no-repeat center center fixed;
+  background: url(http://farm4.staticflickr.com/3188/2798089783_f44d572ea3.jpg) no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -23,6 +23,9 @@ body {
 .profilePic {
 	box-shadow: 3px 3px 3px gray;
 }
+.warren {
+	 color: #b40f0f;
+}
 
 .headWell {
 	background-color: black;
@@ -37,4 +40,8 @@ h6 {
 h5 {
 	color: #b40f0f;
 	font-size: 20px;
+}
+
+.fb-like {
+	margin-left: 8%;
 }

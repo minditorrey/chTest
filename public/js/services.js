@@ -2,6 +2,15 @@
 
 var app = angular.module('finalApp');
 
+
+app.service('BeerSvc', function($http) {
+
+  this.getAll = function() {
+    return $http.get('/beer/random/');
+  };
+
+});
+
 // app.service('ProfileService', function($http) {
 	
 // 	this.nameSort = (username) => {

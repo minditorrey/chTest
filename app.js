@@ -9,6 +9,9 @@ var http = require('http');
 var path = require('path');
 var mongoose = require('mongoose');
 var cookieParser = require('cookie-parser');
+var BreweryDb = require('brewerydb-node');
+var brewdb = new BreweryDb('4fd63f53f2d4450bafd2ddd933b2c5f3');
+var request = require('request');
 
 var stormpath = require('express-stormpath');
 
@@ -27,6 +30,7 @@ app.use(cookieParser());
 app.use(morgan('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: false}));
+
 
 app.use(stormpath.init(app, {
   web: {
