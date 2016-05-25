@@ -11,6 +11,7 @@ var beerSchema = new mongoose.Schema({
   description3: { type: String },
   description4: { type: String },
   rating: { type: Number },
+  sampled: { type: String }
 });
 
 
