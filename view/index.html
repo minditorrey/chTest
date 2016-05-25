@@ -1,12 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta property="og:url"           content="http://www.your-domain.com/your-page.html" />
-  <meta property="og:type"          content="website" />
-  <meta property="og:title"         content="Your Website Title" />
-  <meta property="og:description"   content="Your description" />
-  <meta property="og:image"         content="http://www.your-domain.com/path/image.jpg" />
   <title>final</title>
   <!-- <link rel="stylesheet" href="/bower_components/sweetalert/dist/sweetalert.css"> -->
   <link rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap.min.css">
@@ -24,6 +18,7 @@
   <script src="/js/module.js"></script>
   <script src="/js/controllers.js"></script>
   <script src="/js/services.js"></script>
+
 </head>
 <body ng-app='finalApp'>
   <div class="container-fluid head">
@@ -39,7 +34,7 @@
             <button class="navbar-btn btn" sp-logout if-user ui-sref='home'>Logout</button>
             <button class="navbar-btn btn" if-not-user ui-sref='register'>Register</button>
             <button class="navbar-btn btn" ui-sref='profiles'>Profile</button>            
-            <button class="navbar-btn btn" ui-sref='items'>Items</button>
+            <button class="navbar-btn btn" ui-sref='beer'>Beer</button>
              
       </div>
       </div>

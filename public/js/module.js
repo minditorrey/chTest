@@ -23,10 +23,10 @@ app.config(function($stateProvider, $urlRouterProvider) {
     		url: '/register', 
     		templateUrl: '/html/register.html' 
     	})
-    	.state('items', {
-			url: '/auctions',
-			templateUrl: '/html/items.html',
-			controller: 'itemsController',
+    	.state('beer', {
+			url: '/beer',
+			templateUrl: '/html/beer.html',
+			controller: 'beerController',
 			sp: {
 				authenticate: true
 			}

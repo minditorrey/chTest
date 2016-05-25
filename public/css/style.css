@@ -32,9 +32,28 @@ body {
 	opacity: .8;
 }
 
+.beerHeader {
+	opacity: 1;
+	color: #b40f0f;
+}
+.rateBtn {
+	background-color: #b40f0f;
+	color: black;
+	opacity: 1;
+}
+.well {
+	background-color: black;
+	opacity: .6;
+}
 h6 {
 	color: #b40f0f;
 	font-size: 16px;
+}
+.newBeer {
+	margin-left: 5%;
+}
+h2, h4 {
+	color: #b40f0f;
 }
 
 h5 {
